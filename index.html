@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="fila">
+            <input type="date" id="fechaDigitada" value="2024-11-26">
+            <button class="consultar">consultar</button>
+            <button>buscar fecha</button>
+            <button>descargar excel</button>
+        </div>
+        <p>Presiona consultar para comenzar!</p>
+        <div>
+            <table>
+                <caption>mostrar tipos de cambio</caption>
+                <thead >
+                  <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Moneda</th>
+                    <th scope="col">Compra</th>
+                    <th scope="col">venta</th>
+                  </tr>
+                </thead >
+                <tbody id="tablaContenidos">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
