@@ -1,6 +1,7 @@
 
 var fechaDigitada = document.querySelector("#fechaDigitada");
 
+//corregir, usar onClick
 document.querySelector(".consultar").addEventListener("click", consultar);
 
 function consultar(){
@@ -15,14 +16,16 @@ function consultar(){
     })
     .then(data => {
         const divTipoCambio = document.getElementById("tablaContenidos");
-        divTipoCambio.innerHTML = `
-                <tr>
-                    <th scope="row">${data.fecha}</th>
-                    <td>${data.moneda}</td>
-                    <td>${data.precioCompra}</td>
-                    <td>${data.precioVenta}</td>
-                </tr>
-        `;
+        const unaFila = document.createElement("tr");
+        
+        // divTipoCambio.innerHTML = `
+        //         <tr>
+        //             <th scope="row">${data.fecha}</th>
+        //             <td>${data.moneda}</td>
+        //             <td>${data.precioCompra}</td>
+        //             <td>${data.precioVenta}</td>
+        //         </tr>
+        // `;
         // console.log(data);
     })
     .catch(error => {
